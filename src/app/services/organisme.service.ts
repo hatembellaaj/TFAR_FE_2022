@@ -10,7 +10,7 @@ import { Organisme } from 'src/model/organisme';
 export class OrganismeService {
   private baseUrl = environment.host;
 
-  private auth_token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTY0NzcxNjQ2N30.gPzIrGjGs2Yf4hPW7oKjpMzuIg0z1kiG6X_-4O0ZYcELEDvIcz7wJCdc2oaKYUSjeMgDa6hZX4UlV7vi6oBxgA";
+  private auth_token=environment.token;
 
   headers!: HttpHeaders;
 
