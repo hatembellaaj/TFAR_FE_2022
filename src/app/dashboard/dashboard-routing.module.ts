@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OrganismeModule } from 'src/app/dashboard/organisme/organisme.module';
 import { Fiche2Module } from 'src/app/dashboard/fiche2/fiche2.module';
 import { UserModule } from 'src/app/dashboard/user/user.module';
+import { StatistiqueModule } from 'src/app/dashboard/statistique/statistique.module';
 const routes: Routes = [{path:'', component:DashboardComponent ,children: [{
   path: 'organisme',
   loadChildren: () =>
@@ -33,6 +34,11 @@ const routes: Routes = [{path:'', component:DashboardComponent ,children: [{
   path: 'fiche2',
   loadChildren: () =>
     import('src/app/dashboard/fiche2/fiche2.module').then((m) => Fiche2Module)
+},
+{
+  path: 'statistique',
+  loadChildren: () =>
+    import('src/app/dashboard/statistique/statistique.module').then((m) => StatistiqueModule)
 },
 
 { path: '', pathMatch: 'full', redirectTo: 'hopital' }]}];
