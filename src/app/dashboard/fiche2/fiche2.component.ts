@@ -198,6 +198,8 @@ export class Fiche2Component implements OnInit, OnDestroy, DoCheck  {
 
     this.ficheToSave = {} as Fiche;
     Object.assign(this.ficheToSave, this.ficheI);
+    this.ficheToSave.code=1;
+    this.ficheToSave.codeUser=1;
 
     let patient = this.patientComponent.savePatientInformations();
     this.ficheToSave.patient = patient;

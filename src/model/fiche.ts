@@ -5,6 +5,8 @@ import { Patient } from './patient';
 import {Cousin} from './cousin'
 export interface Fiche {
 
+  code?: number;
+
     idFiche?: number;
 
   ndossierFiche?: string;
