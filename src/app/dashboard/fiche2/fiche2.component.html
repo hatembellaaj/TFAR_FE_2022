@@ -16,7 +16,7 @@
           <mat-option *ngFor="let item of users$ | async " [value]="item.code" >{{item.nom}}</mat-option>
         </mat-select>-->
   
-        <mat-select [(ngModel)]="ficheI.codeUser" ngModel name="UserOfFiche" required  [(ngModel)]="ficheI.code" #ndficheInput="ngModel">
+        <mat-select [(ngModel)]="ficheI.code_user" ngModel name="UserOfFiche" required  [(ngModel)]="ficheI.code_user" #ndficheInput="ngModel">
           <mat-option *ngFor="let item of users$ | async " [value]="item.code" >{{item.nom}}</mat-option>
 
 

@@ -28,6 +28,7 @@ export class FicheService {
   }
 
   saveFiche(fiche: Fiche): Observable<Fiche> {
+    console.log("saving fiche ..................." + fiche.code);
     return this.http.post<Fiche>(this.baseUrl+"/api/fiches/save",fiche,{ headers: this.headers });
   }
 

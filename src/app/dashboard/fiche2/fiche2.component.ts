@@ -112,7 +112,7 @@ export class Fiche2Component implements OnInit, OnDestroy, DoCheck  {
     this.getAllUsers();
     this.userService.getAllUsers().subscribe(data => this.selectedUser = data[0]?.code);
 
-    this.ficheI = { dateDiagnostique: this.date1.value, dateEnregistrement: this.date2.value, codeUser: this.selectedUser } as Fiche;
+    this.ficheI = { dateDiagnostique: this.date1.value, dateEnregistrement: this.date2.value, code_user: this.selectedUser } as Fiche;
 
 
     this.fiche2Service.receivedFiche().subscribe(data => {
@@ -198,8 +198,7 @@ export class Fiche2Component implements OnInit, OnDestroy, DoCheck  {
 
     this.ficheToSave = {} as Fiche;
     Object.assign(this.ficheToSave, this.ficheI);
-    this.ficheToSave.code=1;
-    this.ficheToSave.codeUser=1;
+
 
     let patient = this.patientComponent.savePatientInformations();
     this.ficheToSave.patient = patient;
@@ -254,7 +253,7 @@ export class Fiche2Component implements OnInit, OnDestroy, DoCheck  {
     //this.ficheI.idFiche = fiche.idFiche;
     this.ficheI.dateDiagnostique = fiche.dateDiagnostique;
     this.ficheI.dateEnregistrement = fiche.dateEnregistrement;
-    this.ficheI.codeUser = fiche.codeUser;
+    this.ficheI.code_user = fiche.code_user;
     this.ficheI.ndossierFiche = fiche.ndossierFiche;
     this.patientupdate = fiche.patient;
     console.log('update patient ', this.patientupdate);

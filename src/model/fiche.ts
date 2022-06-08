@@ -425,7 +425,7 @@ export interface Fiche {
   /* 64 */
 
 
-  codeUser?: number;
+  code_user?: number;
 
 
 
