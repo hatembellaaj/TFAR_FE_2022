@@ -110,7 +110,10 @@ export class Fiche2Component implements OnInit, OnDestroy, DoCheck  {
 
   ngOnInit(): void {
     this.getAllUsers();
-    this.userService.getAllUsers().subscribe(data => this.selectedUser = data[0]?.code);
+//    this.userService.getAllUsers().subscribe(data => this.selectedUser = data[0]?.code);
+
+
+
 
     this.ficheI = { dateDiagnostique: this.date1.value, dateEnregistrement: this.date2.value, code_user: this.selectedUser } as Fiche;
 
