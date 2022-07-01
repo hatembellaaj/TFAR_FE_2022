@@ -1,7 +1,7 @@
 import { Component, OnInit, DoCheck, AfterViewInit, AfterViewChecked } from '@angular/core';
-import * as Chart from 'chart.js';
+import { Chart } from 'chart.js';
 import { FicheService } from 'src/app/services/fiche.service';
-declare var google:any;
+
 @Component({
   selector: 'app-statistique',
   templateUrl: './statistique.component.html',
@@ -82,7 +82,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
       //this.fcnChartf1();
       this.bool2 = false;
 
-      console.log('777777777');
+      console.log('cccccccccccc');
 
 
     }
@@ -98,7 +98,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
       //this.fcnChartf1();
       this.bool3 = false;
 
-      console.log('88888888888');
+      console.log('cccccccccccc');
 
 
     }
@@ -115,7 +115,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
       //this.fcnChartf1();
       this.bool4 = false;
 
-      console.log('899999999999');
+      console.log('cccccccccccc');
 
 
     }
@@ -128,6 +128,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
 
   ngOnInit(): void {
 
+
     this.ficheService.getMF_Patient().subscribe(data => {
       this.nbreMale = data.Male;
       this.nbrFemale = data.Female;
@@ -135,7 +136,6 @@ export class StatistiqueComponent implements OnInit, DoCheck {
       if ((this.nbreMale != undefined) && (this.nbrFemale != undefined)) {
         this.bool = true;
       }
-      console.log("pppppppppppppppppppppppppp",data);
 
     });
 
@@ -190,7 +190,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
   fcnChart() {
 
     // pie chart:
-    var PieChart = {
+    this.PieChart = new Chart('pieChart', {
       type: 'pie',
       data: {
         labels: ["Male", "Female"],
@@ -217,10 +217,10 @@ export class StatistiqueComponent implements OnInit, DoCheck {
 
 
       }
-    };
-    console.log("yhyhyhyhyhyhyhyh",PieChart);
+    });
 
-    this.BarChart = new google.visualization('barChart', {
+
+    this.BarChart = new Chart('barChart', {
       type: 'bar',
       data: {
         labels: ["Male", "Female"],
@@ -237,16 +237,13 @@ export class StatistiqueComponent implements OnInit, DoCheck {
         }]
       },
       options: {
-        animation: {
+        animations: {
           animateRotate: false,
-          animateScale: true
         },
         scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
+          yAxis: {
+            min:0
+          }
         }
       }
     });
@@ -261,7 +258,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
   fcnChartf1() {
 
     // pie chart:
-    this.PieChart1 = new google.visualization('pieChart1', {
+    this.PieChart1 = new Chart('pieChart1', {
       type: 'pie',
       data: {
         labels: ["Faite", "Nonfaite", "Moin1", "NP"],
@@ -291,7 +288,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
     });
 
 
-    this.BarChart1 = new google.visualization('barChart1', {
+    this.BarChart1 = new Chart('barChart1', {
       type: 'bar',
       data: {
         labels: ["Faite", "Nonfaite", "Moin1", "NP"],
@@ -308,16 +305,13 @@ export class StatistiqueComponent implements OnInit, DoCheck {
         }]
       },
       options: {
-        animation: {
+        animations: {
           animateRotate: false,
-          animateScale: true
         },
         scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
+          yAxis: {
+            min:0
+          }
         }
       }
     });
@@ -335,7 +329,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
   fcnChartf2() {
 
     // pie chart:
-    this.PieChart2 = new google.visualization('pieChart2', {
+    this.PieChart2 = new Chart('pieChart2', {
       type: 'pie',
       data: {
         labels: ["Normale", "Diminuee", "Moin1", "NP"],
@@ -365,7 +359,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
     });
 
 
-    this.BarChart2 = new google.visualization('barChart2', {
+    this.BarChart2 = new Chart('barChart2', {
       type: 'bar',
       data: {
         labels: ["Normale", "Diminuee", "Moin1", "NP"],
@@ -382,16 +376,13 @@ export class StatistiqueComponent implements OnInit, DoCheck {
         }]
       },
       options: {
-        animation: {
+        animations: {
           animateRotate: false,
-          animateScale: true
         },
         scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
+          yAxis: {
+            min:0
+          }
         }
       }
     });
@@ -406,7 +397,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
   fcnChartf3() {
 
     // pie chart:
-    this.PieChart3 = new google.visualization('pieChart3', {
+    this.PieChart3 = new Chart('pieChart3', {
       type: 'pie',
       data: {
         labels: ["Normale", "Dysplasie", "Moin1"],
@@ -436,7 +427,7 @@ export class StatistiqueComponent implements OnInit, DoCheck {
     });
 
 
-    this.BarChart3 = new google.visualization('barChart3', {
+    this.BarChart3 = new Chart('barChart3', {
       type: 'bar',
       data: {
         labels: ["Normale", "Dysplasie", "Moin1"],
@@ -453,16 +444,13 @@ export class StatistiqueComponent implements OnInit, DoCheck {
         }]
       },
       options: {
-        animation: {
+        animations: {
           animateRotate: false,
-          animateScale: true
         },
         scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
+          yAxis: {
+            min:0
+          }
         }
       }
     });
@@ -471,5 +459,6 @@ export class StatistiqueComponent implements OnInit, DoCheck {
   }
 
 
-}
 
+
+}
