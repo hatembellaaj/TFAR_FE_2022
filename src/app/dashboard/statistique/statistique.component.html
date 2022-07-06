@@ -10,7 +10,7 @@
   <mat-form-field appearance="fill">
     <mat-label>Paramétres </mat-label>
     <mat-select [(ngModel)]="varf" ngModel name="Paramétres" required>
-      <mat-option *ngFor="let item of ['uiv','cellularite','morphologie']" value="{{item}}">{{item}}</mat-option>
+      <mat-option *ngFor="let item of ['uiv','cellularite','morphologie','syndromeanemique','syndromehemorragique','syndromeinf','cancer','hypotrophie','troublecroissance','atteintecut','hyperpigmentation','atteintetete','atteinteoss','anomaliedigestive','malformationuro','microcephalie','microphtalmie','echo','decouvertefortuite','enquetefamiliale','tachecafe','facietriang','traitsfins','reinfercheval','reinunique','reinectopique','retardpubertaire','anomaliepouce','anomalieautredoigts','agenesieradius','anomalieorteil','spinabifida','luxationconghanche','anomalieneuro','retardmental','hypoacousie','strabisme','anomaliecardiovas','echocoeur','endocrinopathie','congelationcellule','transfusion','nbcg','chelationFer','nbcp','nilevar','oxymetholone','androtordyl','toxicite','enqueteHLA','cyclophosphamide','greffefaite','fludarabine','busulfan','serotherapie','smd']" value="{{item}}">{{item}}</mat-option>
     </mat-select>
   </mat-form-field>
 </div>
@@ -57,6 +57,554 @@
 
     </div>
   </div>
+  <div class="container" *ngSwitchCase="'syndromeanemique'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart4" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart4" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'syndromehemorragique'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart5" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart5" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'syndromeinf'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart6" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart6" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'cancer'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart7" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart7" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'hypotrophie'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart8" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart8" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'troublecroissance'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart9" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart9" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'atteintecut'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart10" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart10" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'hyperpigmentation'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart11" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart11" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'atteintetete'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart12" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart12" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'atteinteoss'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart13" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart13" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'anomaliedigestive'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart14" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart14" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'malformationuro'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart15" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart15" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'microcephalie'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart16" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart16" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'microphtalmie'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart17" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart17" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngSwitchCase="'echo'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart18" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart18" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'decouvertefortuite'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart19" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart19" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'enquetefamiliale'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart20" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart20" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'tachecafe'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart21" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart21" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'facietriangulaire'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart22" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart22" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'traitsfins'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart23" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart23" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'reinfercheval'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart24" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart24" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'reinunique'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart25" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart25" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'reinectopique'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart26" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart26" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'retardpubertaire'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart27" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart27" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'anomaliepouce'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart28" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart28" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'anomalieautredoigts'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart29" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart29" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'agenesieradius'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart30" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart30" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'anomalieorteil'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart31" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart31" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'spinabifida'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart32" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart32" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'luxationconghanche'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart33" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart33" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'anomalieneuro'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart34" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart34" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'retardmental'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart35" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart35" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'hypoacousie'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart36" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart36" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'strabisme'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart37" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart37" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'anomaliecardiovas'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart38" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart38" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'echocoeur'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart39" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart39" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'endocrinopathie'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart40" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart40" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'congelationcellule'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart41" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart41" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'transfusion'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart42" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart42" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'nbcg'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart43" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart43" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'chelationFer'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart44" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart44" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'nbcp'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart45" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart45" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'nilevar'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart46" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart46" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'oxymetholone'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart47" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart47" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'androtordyl'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart48" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart48" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'toxicite'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart49" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart49" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'enqueteHLA'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart50" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart50" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'cyclophosphamide'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart51" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart51" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'greffefaite'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart52" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart52" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'fludarabine'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart53" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart53" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'busulfan'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart54" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart54" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'serotherapie'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart55" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart55" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+  <div class="container" *ngSwitchCase="'smd'">
+    <div class="row">
+      <div class="col-md-4"><canvas id="pieChart56" width="420" height="420"></canvas></div>
+
+
+
+      <div class="col-md-4"><canvas id="barChart56" width="420" height="420"></canvas></div>
+
+    </div>
+  </div>
+
+
+
+
+
 
   <div *ngSwitchDefault></div>
 
