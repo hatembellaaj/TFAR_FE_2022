@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { Fiche2Service } from 'src/app/services/fiche2.service';
+import { TokenStorageService } from 'src/app/_services/token-storage.service';
 
 @Component({
   selector: 'app-fiche',
@@ -21,6 +22,7 @@ import { Fiche2Service } from 'src/app/services/fiche2.service';
 export class FicheComponent implements OnInit {
   fiches$!: Observable<Fiche[]>;
   fiche$!: Observable<Fiche>;
+
 
   fichen!:Fiche;
   dataSource!: MatTableDataSource<FicheList>;
@@ -37,9 +39,14 @@ export class FicheComponent implements OnInit {
   bool: boolean = false;
 
 
-  constructor(private router: Router, private ficheService: FicheService, private _snackBar: MatSnackBar,private fiche2Service:Fiche2Service) { }
+  constructor(private router: Router, private ficheService: FicheService, private _snackBar: MatSnackBar,private fiche2Service:Fiche2Service,public tokenstorageservice:TokenStorageService) { }
 
   ngOnInit(): void {    this.getData();
+
+
+
+
+    
   }
   ngDoCheck(): void {
     if (this.bool == true) {

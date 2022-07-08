@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { Chart } from 'chart.js';
 import { FicheService } from 'src/app/services/fiche.service';
+import { TokenStorageService } from 'src/app/_services/token-storage.service';
 
 @Component({
   selector: 'app-statistique',
@@ -468,7 +469,8 @@ export class StatistiqueComponent implements OnInit, DoCheck {
 
 
 
-  constructor(private ficheService: FicheService) {
+  constructor(private ficheService: FicheService, 
+    public tokenstorageservice:TokenStorageService) {
 
 
 
@@ -4478,7 +4480,7 @@ fcnChartf4(){
     this.PieChart41 = new Chart('pieChart41', {
       type: 'pie',
       data: {
-        labels: ["Faite", "NonFaite", "Moin1", "NP"],
+        labels: ["Faite", "Nonfaite", "Moin1", "NP"],
         datasets: [{
           label: 'My first dataset',
           backgroundColor: [
@@ -4508,7 +4510,7 @@ fcnChartf4(){
     this.BarChart41 = new Chart('barChart41', {
       type: 'bar',
       data: {
-        labels: ["Faite", "NonFaite", "Moin1", "NP"],
+        labels: ["Faite", "Nonfaite", "Moin1", "NP"],
         datasets: [{
           label: 'My second dataset',
           data: [this.nbre40Faite, this.nbre40NonFaite,this.nbre40Moin1, this.nbre40NP],

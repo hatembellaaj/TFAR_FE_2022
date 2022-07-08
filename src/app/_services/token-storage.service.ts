@@ -6,6 +6,7 @@ const USER_KEY = 'auth-user';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TokenStorageService {
   constructor() { }
 
@@ -35,4 +36,8 @@ export class TokenStorageService {
 
     return {};
   }
+public hasRole(role:string):boolean{
+  const user = this.getUser();
+ return user!.roles.includes(role);
+}
 }
