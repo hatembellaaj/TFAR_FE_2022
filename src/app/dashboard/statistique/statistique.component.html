@@ -1,12 +1,15 @@
-<div class="km">
+<section class="vh-100 bg-image"
+  style="background-image: url('https://lbe.news/wp-content/uploads/2022/03/Explorer-les-tendances-technologiques-qui-determineront-lavenir-des-soins-de.jpg');">
+  
+  <div class="km">
 
-  <button mat-raised-button color="primary">KM</button>
+  <button class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"mat-raised-button >KM</button>
 
 </div>
 
 
 <div class="flex-container">
-  <span class="label">Paramétres : </span>
+  <span class="label" >Paramétres : </span>
   <mat-form-field appearance="fill">
     <mat-label>Paramétres </mat-label>
     <mat-select [(ngModel)]="varf" ngModel name="Paramétres" required>
@@ -18,7 +21,7 @@
 
 <div class="km1">
 
-  <button mat-raised-button color="primary" (click)="SubFiche(varf)">Submit Fiche</button>
+  <button class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" mat-raised-button  (click)="SubFiche(varf)">Submit Fiche</button>
 
 </div>
 <br>
@@ -626,7 +629,7 @@
 
 <div class="km1">
 
-  <button mat-raised-button color="primary"  (click)="SubPatient(varp)">Submit Patient</button>
+  <button class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" mat-raised-button   (click)="SubPatient(varp)">Submit Patient</button>
 
 </div>
 

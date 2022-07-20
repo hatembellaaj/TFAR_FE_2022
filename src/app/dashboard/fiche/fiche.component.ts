@@ -22,6 +22,11 @@ import { TokenStorageService } from 'src/app/_services/token-storage.service';
 export class FicheComponent implements OnInit {
   fiches$!: Observable<Fiche[]>;
   fiche$!: Observable<Fiche>;
+  private roles: string[] = [];
+  isLoggedIn = false;
+  showAdminBoard = false;
+  showModeratorBoard = false;
+  username?: string;
 
 
   fichen!:Fiche;
@@ -39,10 +44,21 @@ export class FicheComponent implements OnInit {
   bool: boolean = false;
 
 
-  constructor(private router: Router, private ficheService: FicheService, private _snackBar: MatSnackBar,private fiche2Service:Fiche2Service,public tokenstorageservice:TokenStorageService) { }
+  constructor(private router: Router, private ficheService: FicheService, private _snackBar: MatSnackBar,private fiche2Service:Fiche2Service,private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {    this.getData();
 
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
+
+    if (this.isLoggedIn) {
+      const user = this.tokenStorageService.getUser();
+      this.roles = user.roles;
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+
+      this.username = user.username;
+    }
 
 
 
@@ -130,6 +146,7 @@ export class FicheComponent implements OnInit {
 
       }
     );
+    this.showAdminBoard= !this.showAdminBoard;
 
   }
 
@@ -199,6 +216,7 @@ export class FicheComponent implements OnInit {
     }));
 
   }
+
 
 
 

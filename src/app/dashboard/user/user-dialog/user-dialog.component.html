@@ -6,10 +6,9 @@
           <mat-form-field appearance="fill">
             <mat-label>Your role user</mat-label>
             <mat-select [(ngModel)]="user.role" ngModel name="roleUser" required>
-              <mat-option value="Admin">Administrateur</mat-option>
-              <mat-option value="Referent">Référent</mat-option>
-              <mat-option value="Participant">Participant</mat-option>
-              <mat-option value="Invite">Invité</mat-option>
+              <mat-option value="Admin">'ROLE_ADMIN'</mat-option>
+              <mat-option value="Moderator">ROLE_MODERATOR</mat-option>
+              <mat-option value="">Role_USER</mat-option>
             </mat-select>
           </mat-form-field>
   

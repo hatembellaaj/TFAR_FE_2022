@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/_services/user.service';
 import { UserDialogComponent } from './user-dialog/user-dialog.component';
 import { UserDtDialogComponent } from './user-dt-dialog/user-dt-dialog.component';
 import { Departement } from 'src/model/departement';

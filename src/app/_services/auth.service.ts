@@ -29,9 +29,5 @@ export class AuthService {
       password
     }, httpOptions);
   }
-  hasRole(role:string):boolean{
-    const user = this.tokenStorageService.getUser();
-   return user.roles.includes(role);
-  }
   
 }
