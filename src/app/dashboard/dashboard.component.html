@@ -2,12 +2,12 @@
   style="background-image: url('https://lbe.news/wp-content/uploads/2022/03/Explorer-les-tendances-technologiques-qui-determineront-lavenir-des-soins-de.jpg');">
 
 
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="mat-sidenav">
     <mat-sidenav #drawer class="sidenav" 
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="(isHandset$ | async) === false">
-      <mat-toolbar>Menu</mat-toolbar>
+      <mat-toolbar class="gradient-custom-4">Menu</mat-toolbar>
       <mat-nav-list>
         <a *ngIf="showAdminBoard"mat-list-item [routerLink]="'/dashboard/'+'organisme'"> {{'organisme' | titlecase}} </a>
         <a *ngIf="showAdminBoard" mat-list-item [routerLink]="'/dashboard/'+'departement'"> {{'departement' | titlecase}} </a>
@@ -18,7 +18,8 @@
     </mat-sidenav>
     <mat-sidenav-content>
       <mat-toolbar color="primary">
-        <button
+        <button 
+        
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()"

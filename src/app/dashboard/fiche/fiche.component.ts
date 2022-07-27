@@ -143,6 +143,7 @@ export class FicheComponent implements OnInit {
           this.openSnackBar("Delete fail", "Delete fail", 2800);
 
         }
+        this.showAdminBoard= !this.showAdminBoard;
 
       }
     );
